@@ -28,7 +28,7 @@ class App:
 
     def run(self):
         while True:
-            command = self.io.read("Komento (lisaa, listaa, muokkaa, poista tai lopeta): ")
+            command = self.io.read("Komento (lisaa, listaa, muokkaa, poista, bibtex tai lopeta): ")
 
             if command == "lisaa":
                 self.add_reference()
