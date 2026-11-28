@@ -2,6 +2,7 @@
 from storage import load_references, save_references
 from validation import validate_reference
 from keys import generate_key
+from export import export_bibtex
 
 DEFAULT_FILE = "references.json"
 EDIT_FIELDS = [
@@ -37,6 +38,8 @@ class App:
                 self.edit_reference()
             elif command == "poista":
                 self.remove_reference()
+            elif command == "bibtex":
+                export_bibtex(self.references, "references.bib")
             elif command == "lopeta":
                 break
             else:
